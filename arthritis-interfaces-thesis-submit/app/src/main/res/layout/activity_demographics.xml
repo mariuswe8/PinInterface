@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey"
+    tools:context=".activity.DemographicActivity">
+
+    <TextView
+        android:id="@+id/demographics_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/demographics"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender_text">
+
+        <RadioButton
+            android:id="@+id/gender_female"
+            android:tag="FEMALE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender_female"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/gender_male"
+            android:tag="MALE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender_male"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/gender_unknown"
+            android:tag="UNKNOWN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender_unknown"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/gender_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/gender"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/demographics_title" />
+
+    <TextView
+        android:id="@+id/age_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/age"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_gender" />
+
+    <EditText
+        android:id="@+id/age_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/hint_age"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_text" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_dominant_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dominant_hand">
+
+        <RadioButton
+            android:id="@+id/lefthanded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="LEFT"
+            android:text="@string/lefthanded"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/ambidextrous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="AMBIDEXTROUS"
+            android:text="@string/ambidextrous"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rightHanded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="RIGHT"
+            android:text="@string/righthanded"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/dominant_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dominant_hand"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_input" />
+
+    <TextView
+        android:id="@+id/hand_used"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_hand_used"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_dominant_hand" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_hand_used"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hand_used">
+
+        <RadioButton
+            android:id="@+id/lefthanded_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="LEFT"
+            android:text="@string/lefthanded"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/ambidextrous_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="AMBIDEXTROUS"
+            android:text="@string/ambidextrous"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rightHanded_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="RIGHT"
+            android:text="@string/righthanded"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/hand_used_normaly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/hand_used_normaly"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_hand_used" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_hand_used_normaly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hand_used_normaly">
+
+        <RadioButton
+            android:id="@+id/lefthanded_used_normaly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="LEFT"
+            android:text="@string/lefthanded"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/ambidextrous_used_normaly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="AMBIDEXTROUS"
+            android:text="@string/ambidextrous"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rightHanded_used_normaly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="RIGHT"
+            android:text="@string/righthanded"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <include
+        android:id="@+id/demographics_continue"
+        layout="@layout/mod_continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

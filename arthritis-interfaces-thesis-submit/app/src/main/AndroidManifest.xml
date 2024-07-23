@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PinInterface"
+        >
+
+        <activity android:name=".activity.StartActivity"> </activity>
+        <activity android:name=".activity.layout.LayoutStandardActivity"> </activity>
+        <activity android:name=".activity.layout.LayoutStandardVisualAidActivity"> </activity>
+
+        <activity android:name=".activity.layout.LayoutColumnActivity"> </activity>
+       <activity android:name=".activity.layout.LayoutColumnVisualAidActivity"> </activity>
+
+
+        <activity android:name=".activity.IntermediatePageActivity"> </activity>
+
+        <activity android:name=".activity.DemographicActivity"
+            android:windowSoftInputMode="adjustResize"> </activity>
+
+        <activity android:name=".activity.SystemUsabilityScaleActivity"> </activity>
+        <activity android:name=".activity.FeedBackActivity"
+            android:windowSoftInputMode="adjustResize"> </activity>
+        <activity android:name=".activity.EndActivity"> </activity>
+
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
